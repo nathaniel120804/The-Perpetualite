@@ -23,7 +23,7 @@ header{position:sticky;top:12px;z-index:60;margin-bottom: 50px;}
 /*.logo{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,var(--accent),maroon);display:grid;place-items:center;font-weight:800;color:white}*/
 .brand-name{font-family: Old English Text MT; font-size:30px;font-weight:700;color: black;}
 
-nav.primary{display:flex;gap:8px;margin-left:10px;flex-wrap:wrap;}
+nav.primary{display:flex;gap:8px;margin-left:80px;flex-wrap:wrap;}
 nav.primary a{padding:8px 12px;border-radius:999px;color:var(--muted);font-weight:600;font-size:13px}
 nav.primary a.active, nav.primary a:hover{background:rgba(255,255,255,0.02);color:rgb(17, 16, 16);border:1px solid rgba(255,255,255,0.03)}
 
@@ -78,4 +78,31 @@ footer{margin-top:28px;padding:20px;border-top:1px solid rgba(255,255,255,0.02);
   vertical-align: middle; 
   margin-right: 10px;    
 }
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  background: rgba(255,255,255,0.05);
+  padding: 6px 0;
+  border-radius: 6px;
+}
 
+#categoryMarquee a {
+  display: inline-block;
+  color: gray;
+  text-decoration: none;
+  margin-right: 20px;
+  transition: color 0.2s;
+}
+
+#categoryMarquee a:hover {
+  color: var(--accent);
+}
+
+#categoryMarquee {
+  animation: marquee 50s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}

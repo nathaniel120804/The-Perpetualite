@@ -479,3 +479,34 @@ document.querySelectorAll('nav.primary a').forEach(a=>a.addEventListener('click'
 
 renderAll();
 console.log('Campus Chronicle demo loaded — replace DRIVE_IMAGE_ID placeholders with your Google Drive file IDs.');
+// ---------------- MARQUEE ----------------
+function populateMarquee() {
+  const marquee = document.getElementById('categoryMarquee');
+  if (!marquee) return;
+
+  marquee.innerHTML = '';
+
+  // List of categories you want to show in marquee
+  const categoriesList = ['news', 'features', 'opinion', 'sports', 'culture', 'scitech', 'studentlife', 'multimedia'];
+
+  categoriesList.forEach(cat => {
+    // Get latest 3 posts per category
+    const posts = samplePosts.filter(p => p.category === cat).slice(0,3);
+    posts.forEach(p => {
+      const a = document.createElement('a');
+      a.href = "#";
+      a.textContent = `[${cat.toUpperCase()}] ${p.title}`;
+      a.dataset.id = p.id;
+      a.style.marginRight = '20px'; // spacing between links
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        openArticle(p.id);
+      });
+      marquee.appendChild(a);
+    });
+  });
+}
+
+// Call it
+populateMarquee();
+
