@@ -21,14 +21,14 @@ header{position:sticky;top:12px;z-index:60;margin-bottom: 50px;}
 .nav{display:flex;align-items:center;gap:16px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;padding:12px 14px;box-shadow:var(--shadow)}
 .brand{display:flex;align-items:center;gap:12px}
 /*.logo{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,var(--accent),maroon);display:grid;place-items:center;font-weight:800;color:white}*/
-.brand-name{font-family: Old English Text MT;font-size:30px;font-weight:700;color: black;}
+.brand-name{font-family: Old English Text MT; font-size:30px;font-weight:700;color: black;}
 
 nav.primary{display:flex;gap:8px;margin-left:10px;flex-wrap:wrap;}
 nav.primary a{padding:8px 12px;border-radius:999px;color:var(--muted);font-weight:600;font-size:13px}
 nav.primary a.active, nav.primary a:hover{background:rgba(255,255,255,0.02);color:rgb(17, 16, 16);border:1px solid rgba(255,255,255,0.03)}
 
 .spacer{flex:1}
-.search{min-width:240px;max-width:420px;position:relative}
+.search{width: 420px;position:relative; margin-left: 60px;}
 .search input{width:100%;padding:10px 12px 10px 36px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:black;border-color: gray;}
 .search svg{position:absolute;left:10px;top:50%;transform:translateY(-50%);opacity:1;color: gray;}
 
@@ -78,8 +78,3 @@ footer{margin-top:28px;padding:20px;border-top:1px solid rgba(255,255,255,0.02);
   vertical-align: middle; 
   margin-right: 10px;    
 }
-
-
-
-
-
