@@ -71,3 +71,10 @@ footer{margin-top:28px;padding:20px;border-top:1px solid rgba(255,255,255,0.02);
 /* Responsive */
 @media(max-width:1000px){.layout{grid-template-columns:1fr}.hero{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.media{height:180px}}
 @media(max-width:640px){nav.primary{display:none}.search{display:none}.grid{grid-template-columns:1fr}.article-card .thumb{height:160px}}
+
+#icon {
+  width: 40px;  
+  height: 40px;
+  vertical-align: middle; 
+  margin-right: 10px;    
+}
