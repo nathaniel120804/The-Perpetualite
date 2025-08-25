@@ -29,7 +29,7 @@ nav.primary a.active, nav.primary a:hover{background:rgba(255,255,255,0.02);colo
 
 .spacer{flex:1}
 .search{width: 420px;position:relative; margin-left: 60px;}
-.search input{width:100%;padding:10px 12px 10px 36px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:black;border-color: gray;}
+.search input{width:100%;padding:10px 12px 10px 36px;border-radius:20px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:black;border-color: gray;}
 .search svg{position:absolute;left:10px;top:50%;transform:translateY(-50%);opacity:1;color: gray;}
 
 /* Layout */
@@ -78,3 +78,4 @@ footer{margin-top:28px;padding:20px;border-top:1px solid rgba(255,255,255,0.02);
   vertical-align: middle; 
   margin-right: 10px;    
 }
+
