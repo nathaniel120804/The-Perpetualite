@@ -21,7 +21,7 @@ header{position:sticky;top:12px;z-index:60;margin-bottom: 50px;}
 .nav{display:flex;align-items:center;gap:16px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;padding:12px 14px;box-shadow:var(--shadow)}
 .brand{display:flex;align-items:center;gap:12px}
 /*.logo{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,var(--accent),maroon);display:grid;place-items:center;font-weight:800;color:white}*/
-.brand-name{font-size:18px;font-weight:700;color: maroon;}
+.brand-name{font-family: Old English Text MT;font-size:18px;font-weight:700;color: maroon;}
 
 nav.primary{display:flex;gap:8px;margin-left:10px;flex-wrap:wrap;}
 nav.primary a{padding:8px 12px;border-radius:999px;color:var(--muted);font-weight:600;font-size:13px}
@@ -78,4 +78,5 @@ footer{margin-top:28px;padding:20px;border-top:1px solid rgba(255,255,255,0.02);
   vertical-align: middle; 
   margin-right: 10px;    
 }
+
 
