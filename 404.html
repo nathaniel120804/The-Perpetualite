@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Page Not Found — The Perpetualite</title>
+<link rel="icon" type="image/png" href="tp.png">
+<style>
+  body, html {margin:0; padding:0; font-family:sans-serif; background:#0f1724; color:#fff;}
+  .container {max-width:1000px; margin:0 auto; padding:20px;}
+  .brand {display:flex; align-items:center; gap:12px; margin-bottom:20px;}
+  .brand img {height:48px; width:auto;}
+  .brand-name {font-size:24px; font-weight:700;}
+  .search input {padding:6px 12px; border-radius:4px; border:none; width:250px;}
+  .marquee-container {margin:16px 0; overflow:hidden; white-space:nowrap; border-top:1px solid #333; border-bottom:1px solid #333; padding:6px 0;}
+  .marquee {display:inline-block; animation:scroll 20s linear infinite; color:#f9f9f9;}
+  @keyframes scroll {0%{transform:translateX(100%);} 100%{transform:translateX(-100%);}}
+  .error-content {text-align:center; margin-top:60px;}
+  .error-content h1 {font-size:80px; margin-bottom:12px;}
+  .error-content h2 {margin-bottom:20px; color:#aaa;}
+  .btn {display:inline-block; padding:10px 20px; background:#4f46e5; color:#fff; border-radius:6px; text-decoration:none;}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Brand + Search -->
+  <div class="brand">
+    <img src="tp.png" alt="Logo">
+    <div>
+      <div class="brand-name">The Perpetualite</div>
+      <div style="font-size:12px;color:#aaa;">Student publication • Stories from campus</div>
+    </div>
+    <div class="search" style="margin-left:auto;">
+      <input placeholder="Search articles..." />
+    </div>
+  </div>
+
+  <!-- Marquee -->
+  <div class="marquee-container">
+    <div class="marquee">
+      News • Features • Opinion • Sports • Culture • Science & Tech • Student Life • Multimedia
+    </div>
+  </div>
+
+  <!-- 404 Message -->
+  <div class="error-content">
+    <h1>404</h1>
+    <h2>Oops! Page not found.</h2>
+    <p>The page you are looking for does not exist or has been moved.</p>
+    <a href="index.html" class="btn">Go Home</a>
+  </div>
+
+</div>
+
+</body>
+</html>
