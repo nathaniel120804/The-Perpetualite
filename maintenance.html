@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Maintenance — The Perpetualite</title>
+<link rel="icon" type="image/png" href="tp.png">
+<meta name="description" content="Maintenance — The Perpetualite" />
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<header>
+  <div class="nav" role="navigation" aria-label="Primary navigation">
+    <div class="brand">
+      <div class="logo">
+        <img id="icon" src="tp.png" alt="Logo">
+        <a href="index.html" class="no-link-style"></a>
+      </div>
+      <div>
+        <div class="brand-name">The Perpetualite</div>
+        <div style="font-size:12px;color:var(--muted)">Student publication • Stories from campus</div>
+      </div>
+    </div>
+
+    <div class="search" role="search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+        <path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <input id="search" placeholder="Search articles, tags, authors..." aria-label="Search articles" />
+    </div>
+  </div>
+
+  <!-- MARQUEE BELOW BRAND & SEARCH -->
+  <div class="marquee-container" style="margin-top:8px;">
+    <div id="categoryMarquee" class="marquee"></div>
+  </div>
+
+  <!-- PRIMARY MENU -->
+    <nav class="primary" id="menu">
+      <a href="index.html" data-tab="home">Home</a>
+      <a href="#news" data-tab="news">News</a>
+      <a href="#features" data-tab="features">Features</a>
+      <a href="#opinion" data-tab="opinion">Opinion</a>
+      <a href="#sports" data-tab="sports">Sports</a>
+      <a href="#culture" data-tab="culture">Culture</a>
+      <a href="#scitech" data-tab="scitech">Science & Tech</a>
+      <a href="#studentlife" data-tab="studentlife">Student Life</a>
+      <a href="#multimedia" data-tab="multimedia">Multimedia</a>
+      <a href="#about" data-tab="about">About</a>
+    </nav>
+</header>
+
+<main>
+  <!-- Maintenance Message -->
+  <section class="card" style="text-align:center; padding:60px 20px;">
+    <h1 class="headline" style="font-size: 70px;">🔧</h1>
+    <h2 class="kicker" style="font-size: 30px;">We’ll be back soon!</h2>
+    <p class="lead" style="font-size: 20px;">The Perpetualite is currently undergoing scheduled maintenance.<br>Please check back later.</p>
+    <p style="margin-top:20px; font-size:16px; color:var(--muted)">Thank you for your patience and support.</p>
+    <a href="index.html" class="btn">Return Home</a>
+  </section>
+</main>
+
+<footer>
+  <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+    <div style="color:var(--muted); font-family: Old English Text MT;">© <span id="year"></span> The Perpetualite</div>
+    <div style="color:var(--muted)">Contact: theperpetualite@perpetualdalta.edu.ph</div>
+  </div>
+</footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
