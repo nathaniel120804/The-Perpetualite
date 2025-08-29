@@ -34,6 +34,23 @@ const samplePosts = [
   },
  {
     id: 2,
+    title: "Several members of the House of Representatives have reintroduced the Adolescent Pregnancy Prevention bill ",
+    excerpt: "to address the rising teenage pregnancy in the Philippines.",
+    author: "| via Angela Poquiz Samson, The Perpetualite, Source: GMA News",
+    category: "news",
+    date: "August 29, 2025",
+    image: "https://scontent.fmnl16-1.fna.fbcdn.net/v/t39.30808-6/539629443_1168719558610823_8054759592505001044_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFLpxj-541t2es8Lp3U_OBNVOIgJgZoLcZU4iAmBmgtxmYEQNBKsDBeEVasYepQnZUQ7okYyO-h6PiwjtB-RmHl&_nc_ohc=DDl2FhmEjx8Q7kNvwGURRkw&_nc_oc=Adk5oe7S4Xlv2FPYdJI_eqbqodiOdGxyQDBfQe9Np_Mh-EmU3eKzqB5g9cqXMksZnDw&_nc_zt=23&_nc_ht=scontent.fmnl16-1.fna&_nc_gid=8-E3ENrkp_FXZhQne95n7A&oh=00_AfVZFpA0NUJAzzLON3FzSrfY5D5WLGa_rXtytuemuoxcZA&oe=68B7A6DF",
+    content: `
+      <p>Several members of the House of Representatives have reintroduced the Adolescent Pregnancy Prevention bill to address the rising teenage pregnancy in the Philippines.</p>
+      <p>The bill mandates government provision of reproductive health services and family planning information to adolescents, allowing those aged 15 to 18 to access services without parental consent. It also covers younger teens under specific circumstances, such as pregnancy or abuse.</p>
+      <p>Negros Occidental Representative Javi Benitez cited alarming statistics from Victorias City, where teenage pregnancies once reached 189, including cases involving girls as young as eight to 14 years old. He stressed that empathy rather than religion should guide responses and called for well-funded legislation.</p>
+      <p>Meanwhile, Party-list Representative Renee Co described teenage pregnancy as a societal problem linked to widespread abuse and urged immediate government action to protect young girls from early childbearing.</p>
+      <p>"Pabata nang pabata ang mga nanay. Hindi na ito problema ng mga pamilya lang. Sakit na ito ng lipunan bunga ng laganap na abuso sa kababaihan at dapat may agarang aksyon ang gobyerno," Co said.
+</p>
+    `
+  },
+ {
+    id: 3,
     title: "The Department of Public Works and Highways (DPWH) issued a memorandum on August 29, 2025",
     excerpt: "temporarily suspending overseas travel of officials and employees in light of the recent multi-billion-peso flood control controversies.",
     author: "| via Ayeka Abrielle Chavez, The Perpetualite, Photo courtesy of the DPWH, Source: GMA News, Inquirer.net",
@@ -47,6 +64,7 @@ const samplePosts = [
       <p>The memorandum also cited provisions of the Civil Service Commission’s Omnibus Rules on Leave, allowing agencies to restrict travel when required by public interest or administrative concerns.</p>
     `
   },
+ 
 
   // --- FEATURES ---
   {
@@ -286,5 +304,6 @@ function populateMarquee() {
 
 // Call it
 populateMarquee();
+
 
 
