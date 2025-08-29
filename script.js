@@ -299,7 +299,7 @@ const samplePosts = [
     title: "3D Printing Breakthroughs in Engineering Courses",
     excerpt: "Revolutionizing how students design and prototype.",
     author: "Rafael Lim",
-    category: "science & tech",
+    category: "scitech",
     date: "August 2025",
     image: "https://example.com/scitech-3dprint.jpg",
     content: `
@@ -314,7 +314,7 @@ const samplePosts = [
     title: "Campus Robotics Club Wins National Competition",
     excerpt: "Innovation and teamwork pay off.",
     author: "Jerome Tan",
-    category: "science & tech",
+    category: "scitech",
     date: "August 2025",
     image: "https://example.com/scitech-robotics.jpg",
     content: `
@@ -331,7 +331,7 @@ const samplePosts = [
     title: "Balancing Academics and Hobbies",
     excerpt: "Tips for managing stress and staying productive.",
     author: "Mia Torres",
-    category: "student life",
+    category: "studentlife",
     date: "August 2025",
     image: "https://example.com/studentlife-balance.jpg",
     content: `
@@ -346,7 +346,7 @@ const samplePosts = [
     title: "Dorm Life: Stories from Campus Residents",
     excerpt: "A peek into community living and friendships.",
     author: "Katrina Mendoza",
-    category: "student life",
+    category: "studentlife",
     date: "August 2025",
     image: "https://example.com/studentlife-dorm.jpg",
     content: `
