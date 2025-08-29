@@ -32,6 +32,21 @@ const samplePosts = [
       <p>President Marcos revealed on August 11 that 15 contractors have garnered around PHP 100 billion worth of flood control projects nationwide, prompting the Congress to conduct an inquiry into possible anomalies. </p>
     `
   },
+ {
+    id: 2,
+    title: "The Department of Public Works and Highways (DPWH) issued a memorandum on August 29, 2025",
+    excerpt: "temporarily suspending overseas travel of officials and employees in light of the recent multi-billion-peso flood control controversies.",
+    author: "| via Ayeka Abrielle Chavez, The Perpetualite, Photo courtesy of the DPWH, Source: GMA News, Inquirer.net",
+    category: "news",
+    date: "August 29, 2025",
+    image: "https://scontent.fmnl16-1.fna.fbcdn.net/v/t39.30808-6/539629443_1168719558610823_8054759592505001044_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFLpxj-541t2es8Lp3U_OBNVOIgJgZoLcZU4iAmBmgtxmYEQNBKsDBeEVasYepQnZUQ7okYyO-h6PiwjtB-RmHl&_nc_ohc=DDl2FhmEjx8Q7kNvwGURRkw&_nc_oc=Adk5oe7S4Xlv2FPYdJI_eqbqodiOdGxyQDBfQe9Np_Mh-EmU3eKzqB5g9cqXMksZnDw&_nc_zt=23&_nc_ht=scontent.fmnl16-1.fna&_nc_gid=8-E3ENrkp_FXZhQne95n7A&oh=00_AfVZFpA0NUJAzzLON3FzSrfY5D5WLGa_rXtytuemuoxcZA&oe=68B7A6DF",
+    content: `
+      <p>The Department of Public Works and Highways (DPWH) issued a memorandum on August 29, 2025, temporarily suspending overseas travel of officials and employees in light of the recent multi-billion-peso flood control controversies.</p>
+      <p>Under the directive, personal trips of employees and personnel are prohibited, except for urgent medical reasons. The order takes effect immediately and will remain effective until the end of November 2025, unless lifted or extended.</p>
+      <p>“This action is consistent with our commitment to transparency, accountability, and public service integrity,” the memorandum signed by DPWH Secretary Manuel Bonoan stated.</p>
+      <p>The memorandum also cited provisions of the Civil Service Commission’s Omnibus Rules on Leave, allowing agencies to restrict travel when required by public interest or administrative concerns.</p>
+    `
+  },
 
   // --- FEATURES ---
   {
@@ -39,7 +54,7 @@ const samplePosts = [
     title: "Top 5 Study Spots on Campus",
     excerpt: "Finding the best places to focus and excel academically.",
     author: "Mark Santos",
-    category: "features",
+    category: "",
     date: "August 2025",
     image: "https://example.com/features-studyspots.jpg",
     content: `
@@ -56,7 +71,7 @@ const samplePosts = [
     title: "Is Online Learning Effective for Everyone?",
     excerpt: "A debate on digital education in higher learning.",
     author: "Lara Cruz",
-    category: "opinion",
+    category: "",
     date: "August 2025",
     image: "https://example.com/opinion-onlinelearning.jpg",
     content: `
@@ -89,7 +104,7 @@ const samplePosts = [
     title: "Celebrating Local Traditions Through Campus Festivals",
     excerpt: "Keeping heritage alive in modern student life.",
     author: "Ana Velasco",
-    category: "culture",
+    category: "",
     date: "August 2025",
     image: "https://example.com/culture-festival.jpg",
     content: `
@@ -106,7 +121,7 @@ const samplePosts = [
     title: "3D Printing Breakthroughs in Engineering Courses",
     excerpt: "Revolutionizing how students design and prototype.",
     author: "Rafael Lim",
-    category: "scitech",
+    category: "",
     date: "August 2025",
     image: "https://example.com/scitech-3dprint.jpg",
     content: `
@@ -123,7 +138,7 @@ const samplePosts = [
     title: "Balancing Academics and Hobbies",
     excerpt: "Tips for managing stress and staying productive.",
     author: "Mia Torres",
-    category: "studentlife",
+    category: "",
     date: "August 2025",
     image: "https://example.com/studentlife-balance.jpg",
     content: `
@@ -140,7 +155,7 @@ const samplePosts = [
     title: "Capturing Campus Life Through Photography",
     excerpt: "A visual journey of student experiences and events.",
     author: "Leah Gomez",
-    category: "multimedia",
+    category: "",
     date: "August 2025",
     image: "https://example.com/multimedia-photography.jpg",
     content: `
@@ -271,4 +286,5 @@ function populateMarquee() {
 
 // Call it
 populateMarquee();
+
 
