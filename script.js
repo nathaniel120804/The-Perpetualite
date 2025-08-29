@@ -16,17 +16,20 @@ const samplePosts = [
   // --- NEWS ---
   {
     id: 1,
-    title: "University Implements Smart ID System",
-    excerpt: "Modernizing campus security and student services.",
-    author: "Jane Reyes",
+    title: "Vice President Sara Duterte described the flood control",
+    excerpt: "probe of President Ferdinand Marcos Jr. as a 'circus' while at The Hague, Netherlands.",
+    author: "| via Wilson Carlo M. Dela Torre, The Perpetualite Photo courtesy of VP Sara Duterte, Sources: GMA News, Manila Bulletin, Rappler, Philippine Star",
     category: "news",
-    date: "August 2025",
-    image: "https://media.licdn.com/dms/image/v2/C4E12AQHMYM_U7rhRrQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1522429936576?e=2147483647&v=beta&t=VFSMKkn7QrvOaETM8l_BoZSFYraYQAhVnd9pFQ7IpUg",
+    date: "August 29 2025",
+    image: "https://scontent.fmnl16-1.fna.fbcdn.net/v/t39.30808-6/538243934_1168697955279650_5324017231556433365_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHJgCJl79EKsEI3O1W_dWA3L88ItKkSTCIvzwi0qRJMIuCaJYUnjA78yQsrGpavgLD-pMPtnoDT6tSaSkomOrGB&_nc_ohc=Orj_4OgEcWYQ7kNvwHeaelL&_nc_oc=AdlzT2ShnC79jtnG-NN_1qojYtQoERwVzqds68atqCNSzvSPFeFQ2QFLnfH6W12XINY&_nc_zt=23&_nc_ht=scontent.fmnl16-1.fna&_nc_gid=Uu56aRg4c9gbE640F5veOA&oh=00_AfUfgRFF3yXGsleWnD2XxxwZ9y8dVOA5VW8h6uy-NruaFg&oe=68B79696",
     content: `
-      <p>The University of Perpetual Help has launched a smart ID system for students and faculty.</p>
-      <p>The new ID will serve as an access key, library card, and payment method inside the campus.</p>
-      <img src="https://www.hamk.fi/wp-content/uploads/2024/03/AdobeStock_158155353-1.jpg" alt="Smart ID" style="max-width:100%;border-radius:8px;margin:12px 0;">
-      <p>Officials claim it will improve security, reduce fraud, and simplify student transactions.</p>
+      <p>Vice President Sara Duterte described the flood control probe of President Ferdinand Marcos Jr. as a "circus" while at The Hague, Netherlands.</p>
+      <p>"Ayoko magbigay ng libreng advice sa administrasyon. Panoorin na lang natin sila sa circus nila. Panoorin na lang natin sila sa kanilang zarzuela," Duterte stated in an interview on August 27, 2025. 
+</p>
+      <p>Davao acting mayor Baste Duterte also criticized the administration, claiming that Marcos is only using the flood control probe for his "PR."</p>
+      <p>"The President himself ay ginagamit niya 'yung flood control projects na PR niya, responsibilidad niya naman talaga 'yun. Dapat in the first place, he did not allow it to happen," Mayor Duterte said.</p>
+      <p>The Palace, on the other hand, responded to Baste's claim and told the mayor to "just watch."</p>
+      <p>President Marcos revealed on August 11 that 15 contractors have garnered around PHP 100 billion worth of flood control projects nationwide, prompting the Congress to conduct an inquiry into possible anomalies. </p>
     `
   },
   {
