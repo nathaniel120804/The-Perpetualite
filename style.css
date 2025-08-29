@@ -97,3 +97,34 @@ footer { margin-top: 28px; padding: 20px; border-top: 1px solid #e0e0e0; color: 
 .article-body p { margin-bottom: 20px; }
 .btn { display: inline-block; padding: 8px 16px; background: var(--accent-color); color: white; border-radius: 6px; font-weight: 600; font-size: 14px; cursor: pointer; transition: transform 0.2s ease; }
 .btn:hover { transform: scale(1.05); }
+.hero {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr; /* Left: hero, Right: sidebar */
+  gap: var(--gap);
+}
+
+#weather-widget-small {
+  width: 100%;
+  padding: 12px;
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: var(--shadow-light);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: center;
+  font-size: 14px;
+}
+
+#clock-small {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+#weather-small {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+
