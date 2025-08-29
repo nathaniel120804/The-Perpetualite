@@ -70,7 +70,7 @@ const samplePosts = [
     excerpt: "may be at risk following the hacking of Salesforce’s cloud platform, advising users to immediately change their passwords and remain vigilant for suspicious activity.",
     author: "| via Ayeka Abrielle Chavez, The Perpetualite, Sources: News5, The Independent",
     category: "news",
-    date: "August 2025",
+    date: "August 29, 2025",
     image: "https://scontent.fmnl16-1.fna.fbcdn.net/v/t39.30808-6/540496206_1168728111943301_3816277196577029365_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFsgdKqTFg185PD97y3O3-j2Mcd7qS_XPLYxx3upL9c8r9891PAjWLs4YMLArCBw_ou6OTEVF2-QtpKy1FxG4ou&_nc_ohc=gpXP_WS5QNoQ7kNvwGFmkpH&_nc_oc=AdmTXeBdDUlLISxAum6TsbvtqHKIXFxn5UbZ6zFghkHnN_iCsaF7mhHKPUvR2kiU7co&_nc_zt=23&_nc_ht=scontent.fmnl16-1.fna&_nc_gid=9EAB7m1BCfC8GnGKxvI7zw&oh=00_AfVsk3r8Cxb6pyUawoeFSdwUBynXzZ17sICpTS7KxLDMLg&oe=68B79942",
     content: `
       <p>Due to a series of “successful intrusions,” Google has warned that nearly 2.5 billion Gmail users may be at risk following the hacking of Salesforce’s cloud platform, advising users to immediately change their passwords and remain vigilant for suspicious activity.</p>
@@ -320,6 +320,7 @@ function populateMarquee() {
 
 // Call it
 populateMarquee();
+
 
 
 
