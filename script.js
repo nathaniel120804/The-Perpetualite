@@ -232,17 +232,16 @@ const samplePosts = [
   // --- SPORTS ---
   {
     id: 15,
-    title: "Perpetual Teams Shine in Regional Championship",
-    excerpt: "A showcase of talent, teamwork, and school pride.",
-    author: "Carlos Diaz",
+    title: "ALTAS' John Abis joins PBA Rookie Draft",
+    excerpt: "Perpetual ALTAS Men’s Basketball Team’s John Cedric Abis has applied for the PBA Draft Combine",
+    author: "| via Reigne Issel Calderon, The Perpetualite File photo, The Perpetualite Sources: PBA, Inquirer Sports",
     category: "sports",
-    date: "August 2025",
-    image: "https://example.com/sports-championship.jpg",
+    date: "August 29, 2025",
+    image: "https://scontent.fmnl16-1.fna.fbcdn.net/v/t39.30808-6/539191261_1168673565282089_5145713261921272450_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEIPg-m1JIzbLg8eRpS4xYA4jMcx_xLGA_iMxzH_EsYD6AyLnYNLCt9dZa463-q4UWbidyLfNIr8eMT3KSgiyR_&_nc_ohc=Tzt6ZcD4-YUQ7kNvwFYJL85&_nc_oc=AdkY25wCicDZUJrZaj2hC7mme6q1RGlVSCkZYI0XPds43aX2DQBkHxZkUoM_RMxj9e4&_nc_zt=23&_nc_ht=scontent.fmnl16-1.fna&_nc_gid=yi3uhHf_TZ5qiImngqruQw&oh=00_AfU0dhf_TxArJftt3D6yP381Qn3Uc4xqlOVXZfZmMM65KA&oe=68B782E3",
     content: `
-      <p>The university's varsity teams dominated the regional sports championship last week.</p>
-      <p>Basketball, volleyball, and track athletes brought home medals, showcasing perseverance and skill.</p>
-      <img src="https://example.com/sports-championship2.jpg" alt="Sports Championship" style="max-width:100%;border-radius:8px;margin:12px 0;">
-      <p>Coaches emphasize the importance of discipline and teamwork in achieving these victories.</p>
+      <p>Perpetual ALTAS Men’s Basketball Team’s John Cedric Abis has applied for the PBA Draft Combine, which will happen on September 4 and 5, 2025, at the Ynares Sports Arena in Pasig.</p>
+      <p>Abis plays the position of Power Forward for the ALTAS. Following the Rookie Draft, he was included in the list of 128 applicants from various universities, including De La Salle-College of Saint Benilde, Colegio de San Juan de Letran, and Arellano University. </p>
+      <p>The Season 50 Rookie Draft will be held on September 7, at 5:00 p.m., at the SM Mall of Asia Music Hall. </p>
     `
   },
   {
