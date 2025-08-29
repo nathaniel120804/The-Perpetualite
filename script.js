@@ -39,7 +39,7 @@ const samplePosts = [
     author: "| via Angela Poquiz Samson, The Perpetualite, Source: GMA News",
     category: "news",
     date: "August 29, 2025",
-    image: "https://scontent.fmnl16-1.fna.fbcdn.net/v/t39.30808-6/539629443_1168719558610823_8054759592505001044_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFLpxj-541t2es8Lp3U_OBNVOIgJgZoLcZU4iAmBmgtxmYEQNBKsDBeEVasYepQnZUQ7okYyO-h6PiwjtB-RmHl&_nc_ohc=DDl2FhmEjx8Q7kNvwGURRkw&_nc_oc=Adk5oe7S4Xlv2FPYdJI_eqbqodiOdGxyQDBfQe9Np_Mh-EmU3eKzqB5g9cqXMksZnDw&_nc_zt=23&_nc_ht=scontent.fmnl16-1.fna&_nc_gid=8-E3ENrkp_FXZhQne95n7A&oh=00_AfVZFpA0NUJAzzLON3FzSrfY5D5WLGa_rXtytuemuoxcZA&oe=68B7A6DF",
+    image: "https://scontent.fmnl16-1.fna.fbcdn.net/v/t39.30808-6/540093905_1168713505278095_5359584735462409582_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHJ4dkdolQTf8gzkWn2eHJk8cxEaW6fkdfxzERpbp-R1z5oSomPRtxyIYS-WSwK4a6RonPlNppgetKQUTlY4pL9&_nc_ohc=sY1OPN1u43UQ7kNvwGoKLie&_nc_oc=Adm2Vhj_DAASXzMps0w4IKqhvwqRF3rKW16j7hQbEm5msHYAWUSPS4BrpkZjUMyikQw&_nc_zt=23&_nc_ht=scontent.fmnl16-1.fna&_nc_gid=MPptspol33gJt7pa4EqlCg&oh=00_AfX_QIilMzBAEvwa3u-wLK7TqAKVRd-L9HAQEmw7W0aO9w&oe=68B7AE9B",
     content: `
       <p>Several members of the House of Representatives have reintroduced the Adolescent Pregnancy Prevention bill to address the rising teenage pregnancy in the Philippines.</p>
       <p>The bill mandates government provision of reproductive health services and family planning information to adolescents, allowing those aged 15 to 18 to access services without parental consent. It also covers younger teens under specific circumstances, such as pregnancy or abuse.</p>
@@ -62,6 +62,22 @@ const samplePosts = [
       <p>Under the directive, personal trips of employees and personnel are prohibited, except for urgent medical reasons. The order takes effect immediately and will remain effective until the end of November 2025, unless lifted or extended.</p>
       <p>“This action is consistent with our commitment to transparency, accountability, and public service integrity,” the memorandum signed by DPWH Secretary Manuel Bonoan stated.</p>
       <p>The memorandum also cited provisions of the Civil Service Commission’s Omnibus Rules on Leave, allowing agencies to restrict travel when required by public interest or administrative concerns.</p>
+    `
+  },
+ {
+    id: 4,
+    title: "Google has warned that nearly 2.5 billion Gmail users may be at risk",
+    excerpt: "may be at risk following the hacking of Salesforce’s cloud platform, advising users to immediately change their passwords and remain vigilant for suspicious activity.",
+    author: "| via Ayeka Abrielle Chavez, The Perpetualite, Sources: News5, The Independent",
+    category: "news",
+    date: "August 2025",
+    image: "https://scontent.fmnl16-1.fna.fbcdn.net/v/t39.30808-6/540496206_1168728111943301_3816277196577029365_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFsgdKqTFg185PD97y3O3-j2Mcd7qS_XPLYxx3upL9c8r9891PAjWLs4YMLArCBw_ou6OTEVF2-QtpKy1FxG4ou&_nc_ohc=gpXP_WS5QNoQ7kNvwGFmkpH&_nc_oc=AdmTXeBdDUlLISxAum6TsbvtqHKIXFxn5UbZ6zFghkHnN_iCsaF7mhHKPUvR2kiU7co&_nc_zt=23&_nc_ht=scontent.fmnl16-1.fna&_nc_gid=9EAB7m1BCfC8GnGKxvI7zw&oh=00_AfVsk3r8Cxb6pyUawoeFSdwUBynXzZ17sICpTS7KxLDMLg&oe=68B79942",
+    content: `
+      <p>Due to a series of “successful intrusions,” Google has warned that nearly 2.5 billion Gmail users may be at risk following the hacking of Salesforce’s cloud platform, advising users to immediately change their passwords and remain vigilant for suspicious activity.</p>
+      <p>The hacker group ShinyHunters was responsible for the breach, revealing what Google described as "basic and largely publicly available business information." However, this data has since been weaponized to launch more serious social engineering attacks.</p>
+      <p>Google’s Threat Intelligence Group first identified the operation in June, noting that attackers impersonated IT support staff to trick victims. By August, the company confirmed that some of these attempts had led to account compromises.</p>
+      <p>“We believe threat actors using the ‘ShinyHunters’ brand may be preparing to escalate their extortion tactics by launching a data leak site (DLS),” Google Threat Intelligence Group noted in a blog post last June.</p>
+      <p>Recently, Google notified affected users worldwide and reiterated the importance of regularly updating passwords.</p>
     `
   },
  
@@ -304,6 +320,7 @@ function populateMarquee() {
 
 // Call it
 populateMarquee();
+
 
 
 
