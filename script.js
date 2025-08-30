@@ -11,15 +11,13 @@ const sheetURL = "https://script.google.com/macros/s/AKfycbx6_ROHGXnTko2lXNSG1-h
 // This will hold all posts loaded from Sheets
 let samplePosts = [];
 
-// Categories map
+// Categories map - updated with new categories
 const categories = {
   news: 'newsGrid',
   features: 'featuresGrid',
+  literary: 'literaryGrid',
+  editorial: 'editorialGrid',
   opinion: 'opinionGrid',
-  sports: 'sportsGrid',
-  culture: 'cultureGrid',
-  scitech: 'scitechGrid',
-  studentlife: 'studentlifeGrid',
   multimedia: 'multimediaGrid'
 };
 
@@ -43,8 +41,8 @@ function renderAll() {
     const imageUrl = p.image ? p.image.trim() : '';
     const hasImage = imageUrl && imageUrl !== '';
     
-    el.innerHTML = `
-      ${hasImage ? `<div class="thumb" style="background-image:url('${imageUrl}')"></div>` : '<div class="thumb" style="background-color:#f0f0f0;display:flex;align-items:center;justify-content:center;"><span>No Image</span></div>'}
+    el.innerHTML = 
+      `${hasImage ? `<div class="thumb" style="background-image:url('${imageUrl}')"></div>` : '<div class="thumb" style="background-color:#f0f0f0;display:flex;align-items:center;justify-content:center;"><span>No Image</span></div>'}
       <div class="content">
         <h4 data-id="${p.id}">${p.title || 'Untitled'}</h4>
         <div class="meta">${p.author || 'Unknown'} · ${formatDate(p.date)}</div>
@@ -131,15 +129,15 @@ function openArticle(id) {
   const imageUrl = post.image ? post.image.trim() : '';
   const hasImage = imageUrl && imageUrl !== '';
   
-  container.innerHTML = `
-    <h2>${post.title}</h2>
+  container.innerHTML = 
+    `<h2>${post.title}</h2>
     <div class="meta">${post.author} · ${formatDate(post.date)}</div>
     ${hasImage ? `<div style="margin:12px 0;height:360px;background-image:url('${imageUrl}');background-size:cover;background-position:center;border-radius:10px"></div>` : '<div style="margin:12px 0;height:200px;background-color:#f0f0f0;display:flex;align-items:center;justify-content:center;border-radius:10px"><span>No Image Available</span></div>'}
     <div class="article-body">${post.content}</div>
     <div style="margin-top:12px;color:var(--muted)">
       <strong>Tags:</strong> ${post.tags ? post.tags.split(',').map(t => `<span class="tag">${t.trim()}</span>`).join(' ') : ''}
-    </div>
-  `;
+    </div>`
+  ;
 
   document.getElementById('articleView').hidden = false;
   document.getElementById('articleView').scrollIntoView({ behavior: 'smooth' });
@@ -166,8 +164,8 @@ document.getElementById('search').addEventListener('input', e => {
       const imageUrl = p.image ? p.image.trim() : '';
       const hasImage = imageUrl && imageUrl !== '';
       
-      el.innerHTML = `
-        ${hasImage ? `<div class="thumb" style="background-image:url('${imageUrl}')"></div>` : '<div class="thumb" style="background-color:#f0f0f0;display:flex;align-items:center;justify-content:center;"><span>No Image</span></div>'}
+      el.innerHTML = 
+        `${hasImage ? `<div class="thumb" style="background-image:url('${imageUrl}')"></div>` : '<div class="thumb" style="background-color:#f0f0f0;display:flex;align-items:center;justify-content:center;"><span>No Image</span></div>'}
         <div class="content">
           <h4 data-id="${p.id}">${p.title}</h4>
           <div class="meta">${p.author} · ${formatDate(p.date)}</div>
@@ -188,11 +186,15 @@ document.querySelectorAll('nav.primary a').forEach(a => a.addEventListener('clic
     document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
   } else {
     const map = {
-      news: 'newsSection', features: 'featuresSection', opinion: 'opinionSection',
-      sports: 'sportsSection', culture: 'cultureSection', scitech: 'scitechSection',
-      studentlife: 'studentlifeSection', multimedia: 'multimediaSection'
+      news: 'newsSection', 
+      features: 'featuresSection', 
+      literary: 'literarySection',
+      editorial: 'editorialSection',
+      opinion: 'opinionSection',
+      multimedia: 'multimediaSection'
     };
-    const el = document.getElementById(map[tab]); if (el) el.scrollIntoView({ behavior: 'smooth' });
+    const el = document.getElementById(map[tab]); 
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
   }
   document.querySelectorAll('nav.primary a').forEach(n => n.classList.remove('active'));
   a.classList.add('active');
