@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>The Perpetualite — Student Publication</title>
 <link rel="icon" type="image/png" href="tp.png">
-<meta name="description" content="Modern single-page student publication — News, Features, Opinion, Sports, Culture, SciTech, Student Life, Multimedia." />
+<meta name="description" content="Modern single-page student publication — News, Features, Literary, Editorial, Opinion, Multimedia." />
 
 <link rel="stylesheet" href="style.css">
 </head>
@@ -35,15 +35,13 @@
   <!-- PRIMARY MENU -->
     <nav class="primary" id="menu">
       <a href="#home" data-tab="home" class="active">Home</a>
+      <a href="#about" data-tab="about">About</a>
       <a href="#news" data-tab="news">News</a>
       <a href="#features" data-tab="features">Features</a>
+      <a href="#literary" data-tab="literary">Literary</a>
+      <a href="#editorial" data-tab="editorial">Editorial</a>
       <a href="#opinion" data-tab="opinion">Opinion</a>
-      <a href="#sports" data-tab="sports">Sports</a>
-      <a href="#culture" data-tab="culture">Culture</a>
-      <a href="#scitech" data-tab="scitech">Science & Tech</a>
-      <a href="#studentlife" data-tab="studentlife">Student Life</a>
       <a href="#multimedia" data-tab="multimedia">Multimedia</a>
-      <a href="#about" data-tab="about">About</a>
     </nav>
 
 </header>
@@ -56,7 +54,7 @@
     <div style="padding:18px">
       <div class="kicker">Top Story</div>
       <h1 class="headline" id="heroTitle">ALTAS' John Abis joins PBA Rookie Draft</h1>
-      <p class="lead" id="heroLead">Perpetual ALTAS Men’s Basketball Team’s John Cedric Abis has applied for the PBA Draft Combine, which will happen on September 4 and 5, 2025, at the Ynares Sports Arena in Pasig.
+      <p class="lead" id="heroLead">Perpetual ALTAS Men's Basketball Team's John Cedric Abis has applied for the PBA Draft Combine, which will happen on September 4 and 5, 2025, at the Ynares Sports Arena in Pasig.
 Abis plays the position of Power Forward for the ALTAS. Following the Rookie Draft, he was included in the list of 128 applicants from various universities, including De La Salle-College of Saint Benilde, Colegio de San Juan de Letran, and Arellano University. 
 The Season 50 Rookie Draft will be held on September 7, at 5:00 p.m., at the SM Mall of Asia Music Hall. </p>
       <div style="display:flex;gap:12px;align-items:center;margin-top:8px">
@@ -127,44 +125,28 @@ Sources: PBA, Inquirer Sports · August 29</span>
       <div id="featuresGrid" class="grid"></div>
     </section>
 
+    <section id="literarySection" class="card" style="margin-bottom:18px">
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:14px;border-bottom:1px solid rgba(255,255,255,0.02)">
+        <h3 style="margin:0">Literary</h3>
+        <div class="meta">Creative writing & poetry</div>
+      </div>
+      <div id="literaryGrid" class="grid"></div>
+    </section>
+
+    <section id="editorialSection" class="card" style="margin-bottom:18px">
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:14px;border-bottom:1px solid rgba(255,255,255,0.02)">
+        <h3 style="margin:0">Editorial</h3>
+        <div class="meta">Official publication stance</div>
+      </div>
+      <div id="editorialGrid" class="grid"></div>
+    </section>
+
     <section id="opinionSection" class="card" style="margin-bottom:18px">
       <div style="display:flex;justify-content:space-between;align-items:center;padding:14px;border-bottom:1px solid rgba(255,255,255,0.02)">
         <h3 style="margin:0">Opinion</h3>
-        <div class="meta">Editorials & columns</div>
+        <div class="meta">Student perspectives</div>
       </div>
       <div id="opinionGrid" class="grid"></div>
-    </section>
-
-    <section id="sportsSection" class="card" style="margin-bottom:18px">
-      <div style="display:flex;justify-content:space-between;align-items:center;padding:14px;border-bottom:1px solid rgba(255,255,255,0.02)">
-        <h3 style="margin:0">Sports</h3>
-        <div class="meta">Scores & previews</div>
-      </div>
-      <div id="sportsGrid" class="grid"></div>
-    </section>
-
-    <section id="cultureSection" class="card" style="margin-bottom:18px">
-      <div style="display:flex;justify-content:space-between;align-items:center;padding:14px;border-bottom:1px solid rgba(255,255,255,0.02)">
-        <h3 style="margin:0">Culture & Arts</h3>
-        <div class="meta">Events & creative pieces</div>
-      </div>
-      <div id="cultureGrid" class="grid"></div>
-    </section>
-
-    <section id="scitechSection" class="card" style="margin-bottom:18px">
-      <div style="display:flex;justify-content:space-between;align-items:center;padding:14px;border-bottom:1px solid rgba(255,255,255,0.02)">
-        <h3 style="margin:0">Science & Tech</h3>
-        <div class="meta">Research & student projects</div>
-      </div>
-      <div id="scitechGrid" class="grid"></div>
-    </section>
-
-    <section id="studentlifeSection" class="card" style="margin-bottom:18px">
-      <div style="display:flex;justify-content:space-between;align-items:center;padding:14px;border-bottom:1px solid rgba(255,255,255,0.02)">
-        <h3 style="margin:0">Student Life</h3>
-        <div class="meta">Clubs, tips, campus living</div>
-      </div>
-      <div id="studentlifeGrid" class="grid"></div>
     </section>
 
     <section id="multimediaSection" class="card" style="margin-bottom:18px">
@@ -226,48 +208,41 @@ Sources: PBA, Inquirer Sports · August 29</span>
 </footer>
 </div>
 
-<script src="https://theperpetualite.pages.dev/script.js" 
-        integrity="sha384-uUNmkNecm6BeH4p50qA9+l7UQbrRm5dLkxybmXcJS/C9Gxd8pJLA2toUygn2EbMz" 
-        crossorigin="anonymous">
-</script>
 <script>
   // Clock
-function updateClockSmall() {
-  const now = new Date();
-  const hours = now.getHours().toString().padStart(2,'0');
-  const minutes = now.getMinutes().toString().padStart(2,'0');
-  document.getElementById('clock-small').textContent = `${hours}:${minutes}`;
-}
-setInterval(updateClockSmall, 1000);
-updateClockSmall();
+  function updateClockSmall() {
+    const now = new Date();
+    const hours = now.getHours().toString().padStart(2,'0');
+    const minutes = now.getMinutes().toString().padStart(2,'0');
+    document.getElementById('clock-small').textContent = `${hours}:${minutes}`;
+  }
+  setInterval(updateClockSmall, 1000);
+  updateClockSmall();
 
-// Weather
-fetch('https://api.open-meteo.com/v1/forecast?latitude=14.6042&longitude=120.9822&hourly=temperature_2m,weathercode&forecast_days=1')
-  .then(res => res.json())
-  .then(data => {
-    const temps = data.hourly.temperature_2m;
-    const codes = data.hourly.weathercode;
-    const hour = new Date().getHours();
-    const temp = temps[hour];
-    const code = codes[hour];
+  // Weather
+  fetch('https://api.open-meteo.com/v1/forecast?latitude=14.6042&longitude=120.9822&hourly=temperature_2m,weathercode&forecast_days=1')
+    .then(res => res.json())
+    .then(data => {
+      const temps = data.hourly.temperature_2m;
+      const codes = data.hourly.weathercode;
+      const hour = new Date().getHours();
+      const temp = temps[hour];
+      const code = codes[hour];
 
-    const weatherCodes = {
-      0:"Clear",1:"Mainly clear",2:"Partly cloudy",3:"Overcast",
-      45:"Fog",48:"Depositing rime fog",
-      51:"Drizzle: Light",53:"Drizzle: Moderate",55:"Drizzle: Dense",
-      61:"Rain: Slight",63:"Rain: Moderate",65:"Rain: Heavy",
-      71:"Snow: Slight",73:"Snow: Moderate",75:"Snow: Heavy",
-      80:"Rain showers: Slight",81:"Rain showers: Moderate",82:"Rain showers: Violent"
-    };
+      const weatherCodes = {
+        0:"Clear",1:"Mainly clear",2:"Partly cloudy",3:"Overcast",
+        45:"Fog",48:"Depositing rime fog",
+        51:"Drizzle: Light",53:"Drizzle: Moderate",55:"Drizzle: Dense",
+        61:"Rain: Slight",63:"Rain: Moderate",65:"Rain: Heavy",
+        71:"Snow: Slight",73:"Snow: Moderate",75:"Snow: Heavy",
+        80:"Rain showers: Slight",81:"Rain showers: Moderate",82:"Rain showers: Violent"
+      };
 
-    document.getElementById('weather-small').textContent = `${temp}°C, ${weatherCodes[code] || "Unknown"}`;
-  })
-  .catch(err => document.getElementById('weather-small').textContent = 'Weather unavailable');
-
+      document.getElementById('weather-small').textContent = `${temp}°C, ${weatherCodes[code] || "Unknown"}`;
+    })
+    .catch(err => document.getElementById('weather-small').textContent = 'Weather unavailable');
 </script>
 <script src="script.js"></script>
 </body>
 </html>
-
-
 
