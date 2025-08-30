@@ -11,7 +11,7 @@ const sheetURL = "https://script.google.com/macros/s/AKfycbx6_ROHGXnTko2lXNSG1-h
 // This will hold all posts loaded from Sheets
 let samplePosts = [];
 
-// Categories map (same as before)
+// Categories map
 const categories = {
   news: 'newsGrid',
   features: 'featuresGrid',
@@ -25,35 +25,46 @@ const categories = {
 
 // ---------------- RENDERING ----------------
 function renderAll() {
-  Object.values(categories).forEach(id => document.getElementById(id).innerHTML = '');
+  // Clear grids
+  Object.values(categories).forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.innerHTML = '';
+  });
+
+  // Render articles
   samplePosts.forEach(p => {
-    const grid = document.getElementById(categories[p.category?.toLowerCase()]);
+    const grid = document.getElementById(categories[p.category]);
     if (!grid) return;
 
     const el = document.createElement('article');
     el.className = 'article-card';
     el.innerHTML = `
-      <div class="thumb" style="background-image:url('${p.image}')"></div>
+      <div class="thumb" style="background-image:url('${p.image || ''}')"></div>
       <div class="content">
-        <h4 data-id="${p.id}">${p.title}</h4>
-        <div class="meta">${p.author} · ${p.date}</div>
-        <p style="color:var(--muted);margin-top:8px">${p.excerpt}</p>
+        <h4 data-id="${p.id}">${p.title || 'Untitled'}</h4>
+        <div class="meta">${p.author || 'Unknown'} · ${p.date || ''}</div>
+        <p style="color:var(--muted);margin-top:8px">${p.excerpt || ''}</p>
       </div>`;
     el.addEventListener('click', () => openArticle(p.id));
     grid.appendChild(el);
   });
 
-  // Trending (first 5)
+  // Trending
   const trendingList = document.getElementById('trendingList');
-  trendingList.innerHTML = '';
-  samplePosts.slice(0, 5).forEach(p => {
-    const li = document.createElement('li');
-    li.innerHTML = `<a href="#" data-id="${p.id}">${p.title}</a>`;
-    li.querySelector('a').addEventListener('click', e => { e.preventDefault(); openArticle(p.id); });
-    trendingList.appendChild(li);
-  });
+  if (trendingList) {
+    trendingList.innerHTML = '';
+    samplePosts.slice(0, 5).forEach(p => {
+      const li = document.createElement('li');
+      li.innerHTML = `<a href="#" data-id="${p.id}">${p.title}</a>`;
+      li.querySelector('a').addEventListener('click', e => {
+        e.preventDefault();
+        openArticle(p.id);
+      });
+      trendingList.appendChild(li);
+    });
+  }
 
-  // Tags (from Titles + Tags col)
+  // Tags
   const tags = new Set();
   samplePosts.forEach(p => {
     if (p.tags) {
@@ -61,13 +72,15 @@ function renderAll() {
     }
   });
   const tagsList = document.getElementById('tagsList');
-  tagsList.innerHTML = '';
-  Array.from(tags).slice(0, 12).forEach(t => {
-    const b = document.createElement('div');
-    b.className = 'tag';
-    b.textContent = t;
-    tagsList.appendChild(b);
-  });
+  if (tagsList) {
+    tagsList.innerHTML = '';
+    Array.from(tags).slice(0, 12).forEach(t => {
+      const b = document.createElement('div');
+      b.className = 'tag';
+      b.textContent = t;
+      tagsList.appendChild(b);
+    });
+  }
 
   populateMarquee();
 }
@@ -106,7 +119,7 @@ document.getElementById('search').addEventListener('input', e => {
   samplePosts
     .filter(p => (p.title + p.excerpt + p.author + p.category).toLowerCase().includes(q))
     .forEach(p => {
-      const grid = document.getElementById(categories[p.category?.toLowerCase()]) || document.getElementById('newsGrid');
+      const grid = document.getElementById(categories[p.category]) || document.getElementById('newsGrid');
       const el = document.createElement('article');
       el.className = 'article-card';
       el.innerHTML = `
@@ -149,7 +162,7 @@ function populateMarquee() {
 
   const categoriesList = Object.keys(categories);
   categoriesList.forEach(cat => {
-    const posts = samplePosts.filter(p => p.category?.toLowerCase() === cat).slice(0, 3);
+    const posts = samplePosts.filter(p => p.category === cat).slice(0, 3);
     posts.forEach(p => {
       const a = document.createElement('a');
       a.href = "#";
@@ -171,20 +184,27 @@ async function loadFromSheet() {
     const res = await fetch(sheetURL);
     const rows = await res.json();
 
-    // Transform into your format
+    console.log("Raw data from Google Sheets:", rows); // DEBUG
+
+    if (!Array.isArray(rows) || rows.length === 0) {
+      console.warn("No rows found in sheet.");
+      return;
+    }
+
+    // Transform
     samplePosts = rows.map((row, i) => ({
       id: i + 1,
-      title: row.Title,
-      excerpt: row.Excerpt,
-      author: row.Author,
-      category: row.Category?.toLowerCase(),
-      date: row.Date,
-      image: row.ImageURL,
-      tags: row.Tags,
-      content: row.Content
+      title: row.Title || "",
+      excerpt: row.Excerpt || "",
+      author: row.Author || "",
+      category: row.Category ? row.Category.toLowerCase() : "news",
+      date: row.Date || "",
+      image: row.ImageURL || "",
+      tags: row.Tags || "",
+      content: row.Content || ""
     }));
 
-    // Sort newest first (by Date col)
+    // Sort newest first
     samplePosts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
     renderAll();
