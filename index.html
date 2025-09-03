@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>The Perpetualite — Student Publication</title>
+<link rel="icon" type="image/png" href="tp.png">
+<meta name="description" content="Modern single-page student publication — News, Features, Literary, Editorial, Opinion, Multimedia." />
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<header>
+  <div class="nav" role="navigation" aria-label="Primary navigation">
+    <div class="brand">
+      <div class="logo"><img id="icon" src="tp.png"><a href="#home" class="no-link-style"></div>
+      <div>
+        <div class="brand-name">The Perpetualite</div></a>
+        <div style="font-size:12px;color:var(--muted)">Student publication • Stories from campus</div>
+      </div>
+    </div>
+
+    <div class="search" role="search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <input id="search" placeholder="Search articles, tags, authors..." aria-label="Search articles" />
+    </div>
+  </div>
+
+  <!-- MARQUEE BELOW BRAND & SEARCH -->
+  <div class="marquee-container" style="margin-top:8px;">
+    <div id="categoryMarquee" class="marquee"></div>
+  </div>
+
+  <!-- PRIMARY MENU -->
+    <nav class="primary" id="menu">
+      <a href="#home" data-tab="home" class="active">Home</a>
+      <a href="#about" data-tab="about">About</a>
+      <a href="#news" data-tab="news">News</a>
+      <a href="#features" data-tab="features">Features</a>
+      <a href="#literary" data-tab="literary">Literary</a>
+      <a href="#editorial" data-tab="editorial">Editorial</a>
+      <a href="#opinion" data-tab="opinion">Opinion</a>
+      <a href="#multimedia" data-tab="multimedia">Multimedia</a>
+    </nav>
+
+</header>
+
+<!-- TOP STORY -->
+<main>
+<section id="home" class="hero">
+  <div class="card hero-card">
+    <div id="heroMedia" class="media" style="background-image:url('https://scontent.fmnl16-1.fna.fbcdn.net/v/t39.30808-6/539191261_1168673565282089_5145713261921272450_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEZmG065rktIN8DqsBJiodB4jMcx_xLGA_iMxzH_EsYD-5tfAvofca7owWQOhFP5CHmt-JpuU7TMLVZhP_xoyyl&_nc_ohc=Tzt6ZcD4-YUQ7kNvwFYJL85&_nc_oc=AdkY25wCicDZUJrZaj2hC7mme6q1RGlVSCkZYI0XPds43aX2DQBkHxZkUoM_RMxj9e4&_nc_zt=23&_nc_ht=scontent.fmnl16-1.fna&_nc_gid=ID0VK6tKcIV_kkrlKuJG1g&oh=00_AfWCSMt-0wvFY4ZovLXnZQ_a_Zxr2q7uUumW84ODdIQE5A&oe=68B782E3');"></div>
+    <div style="padding:18px">
+      <div class="kicker">Top Story</div>
+      <h1 class="headline" id="heroTitle">ALTAS' John Abis joins PBA Rookie Draft</h1>
+      <p class="lead" id="heroLead">Perpetual ALTAS Men's Basketball Team's John Cedric Abis has applied for the PBA Draft Combine, which will happen on September 4 and 5, 2025, at the Ynares Sports Arena in Pasig.
+Abis plays the position of Power Forward for the ALTAS. Following the Rookie Draft, he was included in the list of 128 applicants from various universities, including De La Salle-College of Saint Benilde, Colegio de San Juan de Letran, and Arellano University. 
+The Season 50 Rookie Draft will be held on September 7, at 5:00 p.m., at the SM Mall of Asia Music Hall. </p>
+      <div style="display:flex;gap:12px;align-items:center;margin-top:8px">
+        <span class="meta">| via Reigne Issel Calderon, The Perpetualite
+File photo, The Perpetualite
+Sources: PBA, Inquirer Sports · August 29</span>
+        <a href="https://www.facebook.com/share/p/1BR1Eig7Uy/" class="btn" id="heroRead">Read</a>
+      </div>
+    </div>
+  </div>
+
+  <aside style="display:flex; flex-direction: column; gap: 14px;">
+  <!-- Weather & Clock Widget -->
+  <div id="weather-widget-small" class="card">
+    <div id="clock-small"></div>
+    <div id="weather-small">Loading weather...</div>
+  </div>
+
+  <!-- Highlights -->
+  <div class="card" style="padding:12px">
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <div class="kicker">Highlights</div>
+      <div style="font-size:13px;color:var(--muted)">Updated today</div>
+    </div>
+    <div style="margin-top:12px;display:grid;gap:10px">
+      <a class="mini" href="https://www.facebook.com/share/p/16UpYqZQ4c/" data-id="scitech-1" style="display:flex;gap:10px;align-items:center">
+        <div style="width:64px;height:52px;border-radius:8px;background:url('https://scontent.fmnl16-1.fna.fbcdn.net/v/t39.30808-6/538243934_1168697955279650_5324017231556433365_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHJgCJl79EKsEI3O1W_dWA3L88ItKkSTCIvzwi0qRJMIuCaJYUnjA78yQsrGpavgLD-pMPtnoDT6tSaSkomOrGB&_nc_ohc=Orj_4OgEcWYQ7kNvwHeaelL&_nc_oc=AdlzT2ShnC79jtnG-NN_1qojYtQoERwVzqds68atqCNSzvSPFeFQ2QFLnfH6W12XINY&_nc_zt=23&_nc_ht=scontent.fmnl16-1.fna&_nc_gid=HKFOQorgUHmemHOC4EOFJQ&oh=00_AfWYfkY12iaVI_eShvX80av92BR9XhM9o0im_hlafalu_A&oe=68B79696') center/cover"></div>
+        <div style="font-weight:700">Vice President Sara Duterte described the flood control</div>
+      </a>
+      <a class="mini" href="https://www.facebook.com/share/p/19zg1JyKTd/" data-id="sports-1" style="display:flex;gap:10px;align-items:center">
+        <div style="width:64px;height:52px;border-radius:8px;background:url('https://scontent.fmnl16-1.fna.fbcdn.net/v/t39.30808-6/539629443_1168719558610823_8054759592505001044_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFLpxj-541t2es8Lp3U_OBNVOIgJgZoLcZU4iAmBmgtxmYEQNBKsDBeEVasYepQnZUQ7okYyO-h6PiwjtB-RmHl&_nc_ohc=DDl2FhmEjx8Q7kNvwGURRkw&_nc_oc=Adk5oe7S4Xlv2FPYdJI_eqbqodiOdGxyQDBfQe9Np_Mh-EmU3eKzqB5g9cqXMksZnDw&_nc_zt=23&_nc_ht=scontent.fmnl16-1.fna&_nc_gid=03lWHUEbsAIBNaw94XsImg&oh=00_AfWg1ij3ybOtIj-WwN0ZEy5mkLvKhLh1ddbwkBhBKn-X7w&oe=68B7A6DF') center/cover"></div>
+        <div style="font-weight:700">The Department of Public Works and Highways (DPWH) issued a memorandum on August 29, 2025</div>
+      </a>
+    </div>
+  </div>
+
+    <!-- Quick Announcements -->
+    <div class="card" style="padding:12px">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <div class="kicker">Quick Announcements</div>
+        <div style="font-size:13px;color:var(--muted)">Pinned</div>
+      </div>
+      <ul style="margin:12px 0 0;padding-left:18px;color:var(--muted)">
+        <li>Club fair: Sept 3 at the gym</li>
+        <li>Scholarship apps due Sept 10</li>
+        <li>Thesis defense schedule posted</li>
+      </ul>
+    </div>
+  </aside>
+</section>
+
+<!-- Sections -->
+<div class="layout">
+  <div>
+    <section id="newsSection" class="card" style="margin-bottom:18px">
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:14px;border-bottom:1px solid rgba(255,255,255,0.02)">
+        <h3 style="margin:0">News</h3>
+        <div class="meta">Latest campus updates</div>
+      </div>
+      <div id="newsGrid" class="grid"></div>
+    </section>
+
+    <section id="featuresSection" class="card" style="margin-bottom:18px">
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:14px;border-bottom:1px solid rgba(255,255,255,0.02)">
+        <h3 style="margin:0">Features</h3>
+        <div class="meta">In-depth stories</div>
+      </div>
+      <div id="featuresGrid" class="grid"></div>
+    </section>
+
+    <section id="literarySection" class="card" style="margin-bottom:18px">
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:14px;border-bottom:1px solid rgba(255,255,255,0.02)">
+        <h3 style="margin:0">Literary</h3>
+        <div class="meta">Creative writing & poetry</div>
+      </div>
+      <div id="literaryGrid" class="grid"></div>
+    </section>
+
+    <section id="editorialSection" class="card" style="margin-bottom:18px">
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:14px;border-bottom:1px solid rgba(255,255,255,0.02)">
+        <h3 style="margin:0">Editorial</h3>
+        <div class="meta">Official publication stance</div>
+      </div>
+      <div id="editorialGrid" class="grid"></div>
+    </section>
+
+    <section id="opinionSection" class="card" style="margin-bottom:18px">
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:14px;border-bottom:1px solid rgba(255,255,255,0.02)">
+        <h3 style="margin:0">Opinion</h3>
+        <div class="meta">Student perspectives</div>
+      </div>
+      <div id="opinionGrid" class="grid"></div>
+    </section>
+
+    <section id="multimediaSection" class="card" style="margin-bottom:18px">
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:14px;border-bottom:1px solid rgba(255,255,255,0.02)">
+        <h3 style="margin:0">Multimedia</h3>
+        <div class="meta">Photo essays & videos</div>
+      </div>
+      <div id="multimediaGrid" class="grid"></div>
+    </section>
+  </div>
+
+  <aside>
+    <div class="widget">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <strong style="color: gray;">Trending</strong>
+        <span class="meta">Now</span>
+      </div>
+      <ol style="margin-top:10px;padding-left:18px;color:var(--muted)" id="trendingList"></ol>
+    </div>
+
+    <div class="widget">
+      <strong style="color: gray;">Tags</strong>
+      <div class="tags" id="tagsList" style="margin-top:10px"></div>
+    </div>
+
+    <div class="widget">
+      <strong style="color: gray;">About</strong>
+      <p style="color:var(--muted);margin-top:8px">The Perpetualite — The Official Student Publication of the University of Perpetual Help System DALTA – Las Piñas</p>
+    </div>
+  </aside>
+</div>
+
+<div id="articleView" class="article-view" hidden>
+  <button id="closeArticle" class="btn" style="float:right">Close</button>
+  <div id="articleContent"></div>
+</div>
+
+<section id="about" style="margin-top:18px;margin-bottom:40px">
+  <div class="card" style="padding:18px">
+    <h3 style="font-family: Old English Text MT;">About The Perpetualite</h3>
+    <p style="color:var(--muted)">The Official Student Publication of the University of Perpetual Help System DALTA – Las Piñas</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+    <div style="color:var(--muted); font-family: Old English Text MT;">
+      © <span id="year"></span><a href="#home"> The Perpetualite</a>
+    </div>
+    <div style="display:flex;align-items:center;gap:8px;color:var(--muted)">
+      <span>Contact: theperpetualite@perpetualdalta.edu.ph |</span>
+      <a href="https://theperpetualitecms.glide.page/" target="_blank" rel="noopener">
+        <img src="tp.png" alt="CMS Link" style="width:40px;height:40px;vertical-align:middle;">CMS</a>
+      </a>
+    </div>
+  </div>
+</footer>
+</div>
+
+<script>
+  // Clock
+  function updateClockSmall() {
+    const now = new Date();
+    const hours = now.getHours().toString().padStart(2,'0');
+    const minutes = now.getMinutes().toString().padStart(2,'0');
+    document.getElementById('clock-small').textContent = `${hours}:${minutes}`;
+  }
+  setInterval(updateClockSmall, 1000);
+  updateClockSmall();
+
+  // Weather
+  fetch('https://api.open-meteo.com/v1/forecast?latitude=14.6042&longitude=120.9822&hourly=temperature_2m,weathercode&forecast_days=1')
+    .then(res => res.json())
+    .then(data => {
+      const temps = data.hourly.temperature_2m;
+      const codes = data.hourly.weathercode;
+      const hour = new Date().getHours();
+      const temp = temps[hour];
+      const code = codes[hour];
+
+      const weatherCodes = {
+        0:"Clear",1:"Mainly clear",2:"Partly cloudy",3:"Overcast",
+        45:"Fog",48:"Depositing rime fog",
+        51:"Drizzle: Light",53:"Drizzle: Moderate",55:"Drizzle: Dense",
+        61:"Rain: Slight",63:"Rain: Moderate",65:"Rain: Heavy",
+        71:"Snow: Slight",73:"Snow: Moderate",75:"Snow: Heavy",
+        80:"Rain showers: Slight",81:"Rain showers: Moderate",82:"Rain showers: Violent"
+      };
+
+      document.getElementById('weather-small').textContent = `${temp}°C, ${weatherCodes[code] || "Unknown"}`;
+    })
+    .catch(err => document.getElementById('weather-small').textContent = 'Weather unavailable');
+</script>
+<script src="script.js"></script>
+</body>
+</html>
+
