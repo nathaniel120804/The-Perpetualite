@@ -44,13 +44,11 @@ function formatDate(dateString) {
 
 // ---------------- POSTS ----------------
 function renderAll() {
-  // Clear grids
   Object.values(categories).forEach(id => {
     const el = document.getElementById(id);
     if (el) el.innerHTML = '';
   });
 
-  // Render posts
   samplePosts.forEach(p => {
     const grid = document.getElementById(categories[p.category]);
     if (!grid) return;
@@ -90,7 +88,7 @@ function renderTrending() {
     .sort((a, b) => new Date(b.date) - new Date(a.date))
     .slice(0, 5);
 
-  if (trendingPosts.length === 0) {
+  if (!trendingPosts.length) {
     trendingList.innerHTML = '<li>No trending articles found</li>';
   } else {
     trendingPosts.forEach(p => {
@@ -271,11 +269,22 @@ async function loadHeroAndHighlights() {
       highlightsGrid.appendChild(card);
     });
 
+    // ---------------- HERO & HIGHLIGHT BUTTON + IMAGE CSS INJECTION ----------------
+    const heroStyle = document.createElement("style");
+    heroStyle.textContent = `
+      #heroContent .media { border-radius: var(--radius); overflow: hidden; }
+      #heroContent .btn { margin-top: 1rem; border-radius: 6px; padding: 8px 16px; font-weight: 600; font-size: 14px; }
+      #highlights .btn { margin-top: 0.75rem; border-radius: 6px; padding: 8px 16px; font-weight: 600; font-size: 14px; }
+      #highlights .article-card { margin-bottom: 1rem; }
+    `;
+    document.head.appendChild(heroStyle);
+
   } catch(err){ console.error("Error loading hero/highlights:", err); }
 }
 
 // ---------------- INIT ----------------
 loadFromSheet();
 loadHeroAndHighlights();
+
 
 
