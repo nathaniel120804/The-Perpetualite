@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Article - The Perpetualite</title>
+<link rel="icon" type="image/png" href="tp.png">
+<meta name="description" content="Read the full article on The Perpetualite - Student Publication" />
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<header>
+  <div class="nav" role="navigation" aria-label="Primary navigation">
+    <div class="brand">
+      <div class="logo"><img id="icon" src="tp.png"><a href="index.html" class="no-link-style"></div>
+      <div>
+        <div class="brand-name">The Perpetualite</div></a>
+        <div style="font-size:12px;color:var(--muted)">Student publication • Stories from campus</div>
+      </div>
+    </div>
+
+    <div class="search" role="search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <input id="search" placeholder="Search articles, tags, authors..." aria-label="Search articles" />
+    </div>
+  </div>
+
+  <!-- PRIMARY MENU -->
+  <nav class="primary" id="menu">
+    <a href="index.html" data-tab="home">Home</a>
+    <a href="index.html#about" data-tab="about">About</a>
+    <a href="index.html#news" data-tab="news">News</a>
+    <a href="index.html#features" data-tab="features">Features</a>
+    <a href="index.html#literary" data-tab="literary">Literary</a>
+    <a href="index.html#editorial" data-tab="editorial">Editorial</a>
+    <a href="index.html#opinion" data-tab="opinion">Opinion</a>
+    <a href="index.html#multimedia" data-tab="multimedia">Multimedia</a>
+  </nav>
+</header>
+
+<main>
+  <div class="article-view">
+    <a href="index.html" class="btn" style="margin-bottom:20px;">← Back to Home</a>
+    <div id="articleContent"></div>
+  </div>
+</main>
+
+<footer>
+  <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+    <div style="color:var(--muted); font-family: Old English Text MT;">
+      © <span id="year"></span><a href="index.html"> The Perpetualite</a>
+    </div>
+    <div style="display:flex;align-items:center;gap:8px;color:var(--muted)">
+      <span>Contact: theperpetualite@perpetualdalta.edu.ph |</span>
+      <a href="https://theperpetualitecms.glide.page/" target="_blank" rel="noopener">
+        <img src="tp.png" alt="CMS Link" style="width:40px;height:40px;vertical-align:middle;">CMS</a>
+      </a>
+    </div>
+  </div>
+</footer>
+</div>
+
+<script>
+  // Set current year
+  document.getElementById('year').textContent = new Date().getFullYear();
+  
+  // Function to format content with line breaks
+  function formatContentWithLineBreaks(content) {
+    if (!content) return '';
+    // Replace newlines with <br> tags
+    return content.replace(/\n/g, '<br>');
+  }
+  
+  // Load article data from URL parameters
+  function loadArticle() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const articleId = urlParams.get('id');
+    const articleType = urlParams.get('type'); // 'post', 'hero', or 'highlight'
+    
+    if (!articleId || !articleType) {
+      document.getElementById('articleContent').innerHTML = `
+        <div class="card" style="padding:20px;text-align:center;">
+          <h2>Article Not Found</h2>
+          <p>We couldn't find the article you're looking for.</p>
+          <a href="index.html" class="btn">Return to Home</a>
+        </div>
+      `;
+      return;
+    }
+    
+    // Load the appropriate data based on article type
+    if (articleType === 'post') {
+      loadPostArticle(articleId);
+    } else if (articleType === 'hero' || articleType === 'highlight') {
+      loadHeroHighlightArticle(articleId, articleType);
+    }
+  }
+  
+  // Load a regular post article
+  function loadPostArticle(id) {
+    // This would need to fetch from your posts API
+    // For now, we'll redirect to the main page which has the modal view
+    window.location.href = `index.html#article-${id}`;
+  }
+  
+  // Load a hero or highlight article
+  async function loadHeroHighlightArticle(id, type) {
+    try {
+      const sheetURL = type === 'hero' 
+        ? "https://script.google.com/macros/s/AKfycbz7Lj3VQ2mOWeswjqYOaeSIQQaqiBvqz74UoBTCiDaBGUeFRGuWH5FW5E_8Aup_HokhMA/exec"
+        : "https://script.google.com/macros/s/AKfycbz7Lj3VQ2mOWeswjqYOaeSIQQaqiBvqz74UoBTCiDaBGUeFRGuWH5FW5E_8Aup_HokhMA/exec";
+      
+      const res = await fetch(sheetURL);
+      const rows = await res.json();
+      
+      if(!Array.isArray(rows) || rows.length === 0) {
+        throw new Error("No data found");
+      }
+      
+      // Normalize row keys
+      function normalizeRow(row) {
+        const normalized = {};
+        Object.keys(row).forEach(k => {
+          normalized[k.trim().toLowerCase()] = row[k];
+        });
+        return normalized;
+      }
+      
+      // Find the article by index (id is the index in the array)
+      const articleIndex = parseInt(id);
+      if (isNaN(articleIndex) || articleIndex < 0 || articleIndex >= rows.length) {
+        throw new Error("Article not found");
+      }
+      
+      const row = normalizeRow(rows[articleIndex]);
+      const imageUrl = row.image || row.imageurl || '';
+      const hasImage = imageUrl.trim() !== '';
+      
+      // Format date
+      function formatDate(dateString) {
+        if (!dateString) return 'No date';
+        try {
+          const date = new Date(dateString);
+          if (isNaN(date.getTime())) return dateString;
+          return date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+        } catch {
+          return dateString;
+        }
+      }
+      
+      // Render the article
+      document.getElementById('articleContent').innerHTML = `
+        <div class="card">
+          <h2 class="article-title">${row.title || row.headline || "Untitled"}</h2>
+          <div class="article-meta">${row.author || "Unknown"} · ${formatDate(row.date)}</div>
+          ${hasImage
+            ? `<div class="article-hero-image" style="background-image:url('${imageUrl}')"></div>`
+            : `<div class="article-hero-image" style="background:#f0f0f0;display:flex;align-items:center;justify-content:center"><span>No Image Available</span></div>`}
+          <div class="article-body">${formatContentWithLineBreaks(row.content || row.lead || row.excerpt || "")}</div>
+          ${row.tags ? `
+            <div style="margin-top:20px;color:var(--muted)">
+              <strong>Tags:</strong> ${row.tags.split(',').map(t => `<span class="tag">${t.trim()}</span>`).join(' ')}
+            </div>
+          ` : ''}
+        </div>
+      `;
+      
+      // Update page title
+      document.title = `${row.title || "Article"} - The Perpetualite`;
+      
+    } catch(err) {
+      console.error("Error loading article:", err);
+      document.getElementById('articleContent').innerHTML = `
+        <div class="card" style="padding:20px;text-align:center;">
+          <h2>Error Loading Article</h2>
+          <p>There was a problem loading the requested article.</p>
+          <a href="index.html" class="btn">Return to Home</a>
+        </div>
+      `;
+    }
+  }
+  
+  // Load the article when page loads
+  document.addEventListener('DOMContentLoaded', loadArticle);
+</script>
+</body>
+</html>

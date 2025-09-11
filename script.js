@@ -245,6 +245,9 @@ async function loadHeroAndHighlights() {
     const rows = await res.json();
     if(!Array.isArray(rows) || rows.length===0) return;
 
+    // Store hero and highlights data globally
+    heroData = rows;
+    
     const hero = normalizeRow(rows[0]);
     const heroContent = document.getElementById("heroContent");
     heroContent.innerHTML = `
@@ -254,12 +257,12 @@ async function loadHeroAndHighlights() {
       ${hero.image||hero.imageurl
         ? `<div class="media" style="background-image:url('${hero.image||hero.imageurl}')"></div>`
         : `<div class="media" style="background:#f0f0f0;display:flex;align-items:center;justify-content:center"><span>No Image</span></div>`}
-      <a href="${hero.link||""}" class="btn">Read More</a>
+      <a href="article.html?id=0&type=hero" class="btn">Read More</a>
     `;
 
     const highlightsGrid = document.getElementById("highlights");
     highlightsGrid.innerHTML = "";
-    rows.slice(1,4).forEach(h=>{
+    rows.slice(1,4).forEach((h, index)=>{
       const row = normalizeRow(h);
       const card = document.createElement("div");
       card.className = "article-card";
@@ -270,7 +273,7 @@ async function loadHeroAndHighlights() {
         <div class="content">
           <h4>${row.title||"Untitled"}</h4>
           <p>${row.lead||row.excerpt||""}</p>
-          <a href="${row.link||""}" class="btn">Read More</a>
+          <a href="article.html?id=${index+1}&type=highlight" class="btn">Read More</a>
         </div>
       `;
       highlightsGrid.appendChild(card);
@@ -292,6 +295,5 @@ async function loadHeroAndHighlights() {
 // ---------------- INIT ----------------
 loadFromSheet();
 loadHeroAndHighlights();
-
 
 
