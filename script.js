@@ -42,6 +42,13 @@ function formatDate(dateString) {
   }
 }
 
+// Format content with line breaks
+function formatContentWithLineBreaks(content) {
+  if (!content) return '';
+  // Replace newlines with <br> tags
+  return content.replace(/\n/g, '<br>');
+}
+
 // ---------------- POSTS ----------------
 function renderAll() {
   Object.values(categories).forEach(id => {
@@ -131,7 +138,7 @@ function openArticle(id) {
     ${hasImage
       ? `<div class="article-hero-image" style="background-image:url('${imageUrl}')"></div>`
       : `<div class="article-hero-image" style="background:#f0f0f0;display:flex;align-items:center;justify-content:center"><span>No Image Available</span></div>`}
-    <div class="article-body">${post.content}</div>
+    <div class="article-body">${formatContentWithLineBreaks(post.content)}</div>
     <div style="margin-top:12px;color:var(--muted)">
       <strong>Tags:</strong> ${post.tags ? post.tags.split(',').map(t => `<span class="tag">${t.trim()}</span>`).join(' ') : ''}
     </div>
@@ -247,7 +254,7 @@ async function loadHeroAndHighlights() {
       ${hero.image||hero.imageurl
         ? `<div class="media" style="background-image:url('${hero.image||hero.imageurl}')"></div>`
         : `<div class="media" style="background:#f0f0f0;display:flex;align-items:center;justify-content:center"><span>No Image</span></div>`}
-      <a href="${hero.link||"#"}" class="btn">Read More</a>
+      <a href="${hero.link||""}" class="btn">Read More</a>
     `;
 
     const highlightsGrid = document.getElementById("highlights");
@@ -263,7 +270,7 @@ async function loadHeroAndHighlights() {
         <div class="content">
           <h4>${row.title||"Untitled"}</h4>
           <p>${row.lead||row.excerpt||""}</p>
-          <a href="${row.link||"#"}" class="btn">Read More</a>
+          <a href="${row.link||""}" class="btn">Read More</a>
         </div>
       `;
       highlightsGrid.appendChild(card);
